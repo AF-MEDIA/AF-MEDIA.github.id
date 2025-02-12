@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo Pemasangan Internet Gratis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007BFF;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        .benefits {
+            text-align: left;
+            margin-top: 30px;
+        }
+        .benefits ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #777;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .packages {
+            text-align: left;
+            margin-top: 30px;
+        }
+        .packages h2 {
+            color: #007BFF;
+        }
+        .packages ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .packages li {
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .packages li strong {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pemasangan Internet Gratis!</h1>
+        <p>Nikmati layanan internet cepat dan stabil tanpa biaya pemasangan.</p>
+        
+        <div class="benefits">
+            <h2>Keuntungan yang Anda Dapatkan:</h2>
+            <ul>
+                <li>Pemasangan GRATIS tanpa biaya tambahan</li>
+                <li>Kecepatan internet hingga 100 Mbps</li>
+                <li>Alat dipinjamkan selama berlanganan</li>
+                <li>Garansi jaringan 99.9% uptime</li>
+            </ul>
+        </div>
+
+        <div class="packages">
+            <h2>Paket Langganan</h2>
+            <ul>
+                <li>
+                    <strong>Paket 1:</strong> Up To 10Mbps (Upload/Download)<br>
+                    Harga: Rp. 100.000/bulan<br>
+                    <em>Fitur: Full Fiber, Unlimited Quota</em>
+                </li>
+                <li>
+                    <strong>Paket 2:</strong> Up To 20Mbps (Upload/Download)<br>
+                    Harga: Rp. 135.000/bulan<br>
+                    <em>Fitur: Full Fiber, Unlimited Quota</em>
+                </li>
+                <li>
+                    <strong>Paket 3:</strong> Up To 50Mbps (Upload/Download)<br>
+                    Harga: Rp. 200.000/bulan<br>
+                    <em>Fitur: Full Fiber, Unlimited Quota</em>
+                </li>
+            </ul>
+        </div>
+
+        <div id="daftar">
+            <h2>Daftar Sekarang</h2>
+            <form id="registrationForm">
+                <label for="name">Nama Lengkap:</label><br>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required><br><br>
+                
+                <label for="wa">Nomor WhatsApp:</label><br>
+                <input type="tel" id="wa" name="wa" placeholder="Contoh: 6281234567890" required><br><br>
+                
+                <label for="address">Alamat:</label><br>
+                <textarea id="address" name="address" rows="4" placeholder="Masukkan alamat lengkap Anda" required></textarea><br><br>
+                
+                <label for="package">Pilih Paket:</label><br>
+                <select id="package" name="package" required>
+                    <option value="" disabled selected>Pilih paket langganan</option>
+                    <option value="Paket 1: 10Mbps - Rp. 100.000/bulan">Paket 1: 10Mbps - Rp. 100.000/bulan</option>
+                    <option value="Paket 2: 20Mbps - Rp. 135.000/bulan">Paket 2: 20Mbps - Rp. 135.000/bulan</option>
+                    <option value="Paket 3: 50Mbps - Rp. 200.000/bulan">Paket 3: 30Mbps - Rp. 150.000/bulan</option>
+                </select><br><br>
+                
+                <button type="button" onclick="sendViaWhatsApp()">Kirim Pendaftaran via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Nama Perusahaan Anda. Semua hak dilindungi.</p>
+    </div>
+
+    <script>
+        function sendViaWhatsApp() {
+            // Ambil nilai dari formulir
+            const name = document.getElementById('name').value;
+            const wa = document.getElementById('wa').value;
+            const address = document.getElementById('address').value;
+            const package = document.getElementById('package').value;
+
+            // Format pesan yang akan dikirim
+            const message = `Halo, saya ingin mendaftar untuk pemasangan internet gratis.\n\n` +
+                            `Nama: ${name}\n` +
+                            `Nomor WhatsApp: ${wa}\n` +
+                            `Alamat: ${address}\n` +
+                            `Paket yang Dipilih: ${package}`;
+
+            // Encode pesan untuk URL
+            const encodedMessage = encodeURIComponent(message);
+
+            // Nomor WhatsApp tujuan
+            const whatsappNumber = '6281310830895';
+
+            // Buat link WhatsApp
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // Buka link WhatsApp di tab baru
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
